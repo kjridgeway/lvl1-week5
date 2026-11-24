@@ -1,0 +1,108 @@
+/* 1. Design Tokens (Variables) */
+:root {
+  --bg-page: #221238;
+  --bg-surface: #cab5ff;
+  --bg-tinted: #d4bcff;
+  --text-main: #29005f;
+  --text-muted: #6d4388;
+  --accent: #442e77;
+  --border-color: #2d004b;
+  
+  --radius: 12px;
+  --space-sm: 12px;
+  --space-md: 24px;
+  --space-lg: 32px;
+}
+
+/* 2. Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text-main); /*var is css function that tells the browser to look up the stored value of --space-md and insert it into that property*/
+  background-color: var(--bg-page);
+}
+
+/* 3. Reusable Layout Utilities */
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Automatically spaces out direct children vertically */
+.stack > * + * {
+  margin-top: var(--space-sm);
+} /* stack eliminates reptitive margins*/
+
+main.stack > * + * {
+  margin-top: var(--space-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 4. Reusable Components */
+.site-header {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding-block: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+
+/* Modifier class to highlight the <aside> without duplicating .card rules */
+.card--tinted {
+  background: var(--bg-tinted);
+  border-color: #4800a7; 
+} /*avoids duplication, only overrides the background and border color*/
+
+.list-spaced {
+  padding-left: 1.25rem;
+}
+
+.list-spaced li + li {
+  margin-top: var(--space-sm);
+}
+
+.site-footer {
+  margin-top: var(--space-lg);
+  padding-block: var(--space-lg);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
