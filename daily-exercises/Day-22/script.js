@@ -1,19 +1,20 @@
 console.log("Hello Hogwarts from the browser");
 
-function castSpell(spell) {
+function castProtego() {
 
-    const result = document.getElementById("spellResult");
+    const result = document.getElementById("protegoResult");
 
-    if (spell === "Protego") {
-
-        result.textContent =
+    result.textContent =
         "✨ Protego! A magical shield surrounds you!";
 
-    } else if (spell === "Expecto Patronum") {
+}
 
-        result.textContent =
-        "✨ Expecto Patronum! A Patronus emerges from your wand!";
 
-    }
+function castPatronus() {
+
+    const result = document.getElementById("patronusResult");
+
+    result.textContent =
+        "✨ Expecto Patronum! A beautiful silvery-white Patronus emerges from your wand!";
 
 }
