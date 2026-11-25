@@ -1,108 +1,158 @@
-/* 1. Design Tokens (Variables) */
-:root {
-  --bg-page: #221238;
-  --bg-surface: #cab5ff;
-  --bg-tinted: #d4bcff;
-  --text-main: #29005f;
-  --text-muted: #6d4388;
-  --accent: #442e77;
-  --border-color: #2d004b;
-  
-  --radius: 12px;
-  --space-sm: 12px;
-  --space-md: 24px;
-  --space-lg: 32px;
-}
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap');
+/* ================================
+   HOGWARTS THEME
+   Protective Spells and Charms
+   ================================ */
 
-/* 2. Base Reset & Typography */
+/* Universal box sizing */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 
+/* General page styling */
 body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  color: var(--text-main); /*var is css function that tells the browser to look up the stored value of --space-md and insert it into that property*/
-  background-color: var(--bg-page);
+    margin: 0;
+    padding: 0;
+
+    /* Aged parchment background */
+    background-color: #d8c49a;
+    color: #046A38;
+    font-family: 'IM fell English', serif;
+    line-height: 1.7;
 }
 
-/* 3. Reusable Layout Utilities */
-.container {
-  max-width: 800px;
-  margin-inline: auto;
-  padding-inline: var(--space-md);
+/* Header */
+header {
+    background-color: #4b1721;
+    color: #e6c878;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 4px solid #b99546;
 }
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
+header h1 {
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    margin: 0;
+    overflow-wrap: break-word;
+    font-family: 'IM Fell English', cursive;
 }
 
-/* Automatically spaces out direct children vertically */
-.stack > * + * {
-  margin-top: var(--space-sm);
-} /* stack eliminates reptitive margins*/
-
-main.stack > * + * {
-  margin-top: var(--space-lg);
+/* Main content */
+main {
+    width: 90%;
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: #e8d6ae;
+    border: 3px solid #a17b39;
+    border-radius: 6px;
 }
 
-.text-center {
-  text-align: center;
+/* Section headings */
+h2 {
+    color: #046A38;
+    font-size: 1.7rem;
+    border-bottom: 2px solid #a17b39;
+    padding-bottom: 8px;
+    margin-top: 25px;
 }
 
-/* 4. Reusable Components */
-.site-header {
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-color);
-  padding-block: var(--space-md);
-  margin-bottom: var(--space-lg);
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.nav-links {
-  display: flex;
-  gap: var(--space-md);
+/* Additional spells section */
+section {
+    width: 90%;
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: #e8d6ae;
+    border: 3px solid #a17b39;
+    border-radius: 6px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
+section > p {
+    color: #046A38;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
-.nav-links a:hover {
-  text-decoration: underline;
+/* Spell list */
+ul {
+    padding-left: 25px;
 }
 
-.card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: var(--space-lg);
+li {
+    margin-bottom: 25px;
+    padding-left: 5px;
 }
 
-/* Modifier class to highlight the <aside> without duplicating .card rules */
-.card--tinted {
-  background: var(--bg-tinted);
-  border-color: #4800a7; 
-} /*avoids duplication, only overrides the background and border color*/
-
-.list-spaced {
-  padding-left: 1.25rem;
+li strong {
+    color: #046A38;
+    font-size: 1.1rem;
 }
 
-.list-spaced li + li {
-  margin-top: var(--space-sm);
+/* Footer */
+footer {
+    background-color: #21130f;
+    color: #e6c878;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid #a17b39;
 }
 
-.site-footer {
-  margin-top: var(--space-lg);
-  padding-block: var(--space-lg);
-  color: var(--text-muted);
-  border-top: 1px solid var(--border-color);
+/* Hover effects */
+h2:hover,
+li strong:hover {
+    color: #a17b39;
+    transition: color 0.3s ease;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   Supports screens as narrow as 320px
+   ================================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main,
+    section {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        overflow-wrap: break-word;
+    }
+
+    footer {
+        padding: 18px 10px;
+    }
 }
