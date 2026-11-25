@@ -6,6 +6,10 @@ function castProtego() {
 
     result.textContent =
         "✨ Protego! A magical shield surrounds you!";
+    
+    setTimeout(function() {
+        result.textContent ="";
+    }, 5000);
 
 }
 
@@ -18,3 +22,4 @@ function castPatronus() {
         "✨ Expecto Patronum! A beautiful silvery-white Patronus emerges from your wand!";
 
 }
+
