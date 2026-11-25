@@ -151,8 +151,76 @@ li strong:hover {
     li {
         overflow-wrap: break-word;
     }
+/* For Button Styling */
+
 
     footer {
         padding: 18px 10px;
     }
+}
+
+/* ================================
+   MAGICAL EMERALD BUTTONS
+   ================================ */
+
+button {
+    background: linear-gradient(
+        145deg,
+        #087a42,
+        #046A38,
+        #034d29
+    );
+
+    color: #f5e6b3;
+
+    font-family: 'IM Fell English', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    padding: 12px 25px;
+
+    border: 2px solid #b99546;
+    border-radius: 8px;
+
+    /* 3D raised effect */
+    box-shadow:
+        0 6px 0 #02351d,
+        0 8px 12px rgba(0, 0, 0, 0.35);
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(
+        145deg,
+        #0a9952,
+        #087a42,
+        #046A38
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 0 #02351d,
+        0 8px 18px rgba(4, 106, 56, 0.5);
+
+    transform: translateY(-2px);
+}
+
+/* Pressed button effect */
+button:active {
+    transform: translateY(5px);
+
+    box-shadow:
+        0 1px 0 #02351d,
+        0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyboard accessibility */
+button:focus-visible {
+    outline: 3px solid #e6c878;
+    outline-offset: 4px;
 }
