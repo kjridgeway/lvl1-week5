@@ -20,6 +20,10 @@ function castPatronus() {
 
     result.textContent =
         "✨ Expecto Patronum! A beautiful silvery-white Patronus emerges from your wand!";
+    
+        setTimeout(function() {
+        result.textContent ="";
+    }, 5000);
 
 }
 
