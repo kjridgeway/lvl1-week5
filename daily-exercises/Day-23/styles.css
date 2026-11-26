@@ -1,5 +1,189 @@
 /* TODO: Add your page's spacing, readable text, and responsive layout. */
 /* Check the result around 320px and 1280px wide. */
+
+/* =================================
+   RESTRICTED SECTION - HOGWARTS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(15, 10, 13, 0.65), rgba(15, 10, 13, 0.85)),
+        url("library-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #29180f;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Main parchment quest card */
+
+.sidequest {
+    max-width: 750px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            rgba(239, 213, 164, 0.94),
+            rgba(215, 180, 123, 0.96)
+        );
+
+    border: 8px double #765025;
+    outline: 2px solid #c6a45b;
+    outline-offset: 7px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.8),
+        inset 0 0 35px rgba(91, 52, 19, 0.3);
+
+    text-align: center;
+}
+
+/* Main heading */
+
+.sidequest h1 {
+    font-family: 'Cinzel', cursive;
+    font-size: clamp(42px, 8vw, 72px);
+    color: #29152d;
+
+    text-shadow: 2px 2px 2px #a88750;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Secondary heading */
+
+.sidequest h2 {
+    font-family: 'Cinzel', cursive;
+    font-size: 36px;
+    color: #17472f;
+
+    border-bottom: 2px solid #8c642c;
+    padding-bottom: 15px;
+}
+
+/* Story text */
+
+.sidequest p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    line-height: 1.7;
+    color: #342116;
+    margin: 20px 0;
+}
+
+/* Quest button */
+
+.sidequest button {
+    font-family: 'Cinzel', cursive;
+    font-size: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #39203e,
+        #211326
+    );
+
+    color: #e8cb8b;
+
+    border: 3px double #c6a45b;
+    border-radius: 5px;
+
+    padding: 15px 35px;
+    margin: 20px 0;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 0 #100b10,
+        0 0 15px rgba(110, 77, 132, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* Magical hover effect */
+
+.sidequest button:hover {
+    background: linear-gradient(
+        135deg,
+        #17472f,
+        #0c291b
+    );
+
+    color: #f5dda0;
+
+    box-shadow:
+        0 5px 0 #08190f,
+        0 0 25px #c6a45b;
+
+    transform: translateY(-3px);
+}
+
+/* Keyboard focus */
+
+.sidequest button:focus-visible {
+    outline: 3px solid #17472f;
+    outline-offset: 6px;
+}
+
+/* Quest message */
+
+#questMessage {
+    font-family: 'Cormorant Garamond', cursive;
+    font-size: 27px;
+
+    color: #39203e;
+
+    border: 2px solid #99713a;
+    padding: 15px;
+
+    background: rgba(255, 239, 202, 0.35);
+
+    box-shadow: inset 0 0 12px rgba(91, 52, 19, 0.2);
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .sidequest {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .sidequest h2 {
+        font-size: 28px;
+    }
+
+    .sidequest p {
+        font-size: 18px;
+    }
+
+    .sidequest button {
+        font-size: 21px;
+        max-width: 100%;
+        padding: 12px 20px;
+    }
+
+    #questMessage {
+        font-size: 23px;
+    }
 }
