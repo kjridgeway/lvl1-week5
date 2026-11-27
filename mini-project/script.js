@@ -1,3 +1,4 @@
+
 // Select the HTML elements
 const storyButton = document.querySelector("#storyButton");
 const storyMessage = document.querySelector("#storyMessage");
@@ -27,5 +28,10 @@ storyButton.addEventListener("click", function() {
 
     // Display the selected message
     storyMessage.textContent = getStoryMessage(secondMessageSelected);
+
+    // Update the button label to reflect the next available action
+    storyButton.textContent = secondMessageSelected
+        ? "Return to Your Hogwarts Letter"
+        : "Open Your Hogwarts Letter";
 
 });
