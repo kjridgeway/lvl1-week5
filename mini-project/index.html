@@ -3,20 +3,58 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO: Your fictional event</title>
+
+    <title>The Hogwarts Chronicles | A Magical Adventure</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- TODO: Link script.js with defer. -->
+
+    <!-- Link the external JavaScript file and defer execution until HTML is parsed. -->
+    <script src="script.js" defer></script>
   </head>
+
   <body>
+
     <header>
-      <!-- TODO: Introduce your event with one meaningful h1. -->
+      <!-- Introduce the fictional event with one meaningful h1. -->
+      <h1>The Hogwarts Chronicles</h1>
+      <p>Your Magical Adventure Begins...</p>
     </header>
+
     <main>
-      <!-- TODO: Add useful sections with h2 headings. -->
-      <!-- TODO: Add your native button and live message paragraph. -->
+      <!-- Create a section introducing the beginning of the adventure. -->
+      <section class="story-section">
+
+        <h2>A Letter from Hogwarts</h2>
+
+        <!-- Introduce the fictional event and set the scene for the player. -->
+        <p>
+          Your magical journey is about to begin.
+          An unexpected visitor has arrived with something
+          that could change your life forever.
+          Are you ready to discover what awaits you?
+        </p>
+
+        <!-- Display the initial story message that JavaScript will update. -->
+        <p id="storyMessage" aria-live="polite">
+          The morning owl arrives at your window, carrying an
+          unusual envelope sealed with green wax. Your name is
+          written across the front in elegant handwriting.
+          Could this really be a letter from Hogwarts School
+          of Witchcraft and Wizardry?
+        </p>
+
+        <!-- Native button that allows the player to interact with the story. -->
+        <button type="button" id="storyButton">
+          Open Your Hogwarts Letter
+        </button>
+
+      </section>
     </main>
+
     <footer>
-      <!-- TODO: Add suitable fictional information. -->
+      <!-- Add suitable fictional information related to the adventure. -->
+      <p>Every great adventure begins with a single choice...</p>
+      <p>Hogwarts School of Witchcraft and Wizardry</p>
     </footer>
-  </body>
 </html>
+
