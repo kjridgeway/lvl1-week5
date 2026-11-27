@@ -2,7 +2,7 @@
 /* General page styling */
 body {
     background-color: #17231c;
-    color: #f5e6c8;
+    color: #678f67;
     font-family: Georgia, serif;
     margin: 0;
     padding: 30px 15px;
@@ -11,7 +11,7 @@ body {
 /* Main game container */
 .game-container {
     background-color: #efe2c3;
-    color: #30291e;
+    color: #da9f42;
     max-width: 650px;
     width: 100%;
     box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
 
 /* Game heading */
 h1 {
-    color: #174b32;
+    color: #af970c;
     font-size: 32px;
     margin-bottom: 10px;
 }
